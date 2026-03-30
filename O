@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <string>
 
-// Roblox Version: version-d599f7fc52a8404c
+// Roblox Version: version-6776addb8fbc4d17
 // Byfron Version: ???
 namespace Offsets {
     inline std::string ClientVersion = "version-6776addb8fbc4d17";
