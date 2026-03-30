@@ -1,9 +1,21 @@
 #pragma once
+/* =============================================================
+/*                       RbxDumperV2                            
+/*               https://imtheo.lol/Offsets                     
+/* -------------------------------------------------------------
+/*  Dumped By       : theo (https://imtheo.lol)                 
+/*  Roblox Version  : version-6776addb8fbc4d17
+/*  Dumper Version  : 2.1.6
+/*  Dumped At       : 15:15 29/03/2026 (GMT)
+/*  Total Offsets   : 381
+/* -------------------------------------------------------------
+/*  Join the discord!                                           
+/*  https://discord.gg/rbxoffsets                               
+/* =============================================================
+*/
+
 #include <cstdint>
 #include <string>
-
-// Roblox Version: version-6776addb8fbc4d17
-// Byfron Version: ???
 namespace Offsets {
     inline std::string ClientVersion = "version-6776addb8fbc4d17";
 
