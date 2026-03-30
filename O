@@ -4,9 +4,9 @@
 
 // Roblox Version: version-d599f7fc52a8404c
 // Byfron Version: ???
-namespace SDK::Offsets
-{
-    bool TryUpdateFromApi(std::string* error = nullptr);
+namespace Offsets {
+    inline std::string ClientVersion = "version-6776addb8fbc4d17";
+
     namespace AirProperties {
          inline constexpr uintptr_t AirDensity = 0x18;
          inline constexpr uintptr_t GlobalWind = 0x3c;
@@ -86,6 +86,7 @@ namespace SDK::Offsets
          inline constexpr uintptr_t CameraSubject = 0xe8;
          inline constexpr uintptr_t CameraType = 0x158;
          inline constexpr uintptr_t FieldOfView = 0x160;
+         inline constexpr uintptr_t ImagePlaneDepth = 0x2f0;
          inline constexpr uintptr_t Position = 0x11c;
          inline constexpr uintptr_t Rotation = 0xf8;
          inline constexpr uintptr_t Viewport = 0x2ac;
@@ -143,6 +144,20 @@ namespace SDK::Offsets
          inline constexpr uintptr_t FocusDistance = 0xd4;
          inline constexpr uintptr_t InFocusRadius = 0xd8;
          inline constexpr uintptr_t NearIntensity = 0xdc;
+    }
+
+    namespace DragDetector {
+         inline constexpr uintptr_t ActivatedCursorIcon = 0x1d8;
+         inline constexpr uintptr_t CursorIcon = 0xe0;
+         inline constexpr uintptr_t MaxActivationDistance = 0x100;
+         inline constexpr uintptr_t MaxDragAngle = 0x2c0;
+         inline constexpr uintptr_t MaxDragTranslation = 0x284;
+         inline constexpr uintptr_t MaxForce = 0x2c4;
+         inline constexpr uintptr_t MaxTorque = 0x2c8;
+         inline constexpr uintptr_t MinDragAngle = 0x2cc;
+         inline constexpr uintptr_t MinDragTranslation = 0x290;
+         inline constexpr uintptr_t ReferenceInstance = 0x208;
+         inline constexpr uintptr_t Responsiveness = 0x2d8;
     }
 
     namespace FakeDataModel {
@@ -304,7 +319,7 @@ namespace SDK::Offsets
          inline constexpr uintptr_t ByteCode = 0x150;
          inline constexpr uintptr_t GUID = 0xe8;
          inline constexpr uintptr_t Hash = 0x160;
-         inline constexpr uintptr_t IsCoreScript = 0x0;
+         inline constexpr uintptr_t IsCoreScript = 0x180;
     }
 
     namespace MouseService {
@@ -342,7 +357,7 @@ namespace SDK::Offsets
          inline constexpr uintptr_t MaxZoomDistance = 0x320;
          inline constexpr uintptr_t MinZoomDistance = 0x324;
          inline constexpr uintptr_t ModelInstance = 0x398;
-         inline constexpr uintptr_t Mouse = 0xf90;
+         inline constexpr uintptr_t Mouse = 0xdc8;
          inline constexpr uintptr_t NameDisplayDistance = 0x358;
          inline constexpr uintptr_t Team = 0x2a0;
          inline constexpr uintptr_t TeamColor = 0x364;
@@ -354,15 +369,15 @@ namespace SDK::Offsets
     }
 
     namespace PlayerMouse {
-         inline constexpr uintptr_t Icon = 0xe0;
-         inline constexpr uintptr_t Workspace = 0x168;
+         inline constexpr uintptr_t Icon = 0x0;
+         inline constexpr uintptr_t Workspace = 0x108;
     }
 
     namespace Primitive {
          inline constexpr uintptr_t AssemblyAngularVelocity = 0xfc;
          inline constexpr uintptr_t AssemblyLinearVelocity = 0xf0;
          inline constexpr uintptr_t Flags = 0x1ae;
-         inline constexpr uintptr_t Material = 0x0;
+         inline constexpr uintptr_t Material = 0x230;
          inline constexpr uintptr_t Owner = 0x1f8;
          inline constexpr uintptr_t Position = 0xe4;
          inline constexpr uintptr_t Rotation = 0xc0;
@@ -396,8 +411,8 @@ namespace SDK::Offsets
 
     namespace RenderView {
          inline constexpr uintptr_t DeviceD3D11 = 0x8;
-         inline constexpr uintptr_t LightingValid = 0x0;
-         inline constexpr uintptr_t SkyValid = 0x0;
+         inline constexpr uintptr_t LightingValid = 0x148;
+         inline constexpr uintptr_t SkyValid = 0x2cd;
          inline constexpr uintptr_t VisualEngine = 0x10;
     }
 
@@ -413,7 +428,7 @@ namespace SDK::Offsets
     }
 
     namespace ScriptContext {
-         inline constexpr uintptr_t RequireBypass = 0x0;
+         inline constexpr uintptr_t RequireBypass = 0x8fd;
     }
 
     namespace Seat {
@@ -431,7 +446,7 @@ namespace SDK::Offsets
          inline constexpr uintptr_t SkyboxRt = 0x1d0;
          inline constexpr uintptr_t SkyboxUp = 0x200;
          inline constexpr uintptr_t StarCount = 0x260;
-         inline constexpr uintptr_t SunAngularSize = 0x254;
+         inline constexpr uintptr_t SunAngularSize = 0x104;
          inline constexpr uintptr_t SunTextureId = 0x230;
     }
 
@@ -446,7 +461,7 @@ namespace SDK::Offsets
     }
 
     namespace SpawnLocation {
-         inline constexpr uintptr_t AllowTeamChangeOnTouch = 0x45;
+         inline constexpr uintptr_t AllowTeamChangeOnTouch = 0x1f8;
          inline constexpr uintptr_t Enabled = 0x1f9;
          inline constexpr uintptr_t ForcefieldDuration = 0x1f0;
          inline constexpr uintptr_t Neutral = 0x1fa;
@@ -509,12 +524,16 @@ namespace SDK::Offsets
 
     namespace Tool {
          inline constexpr uintptr_t CanBeDropped = 0x4c0;
-         inline constexpr uintptr_t Enabled = 0x3c5;
+         inline constexpr uintptr_t Enabled = 0x4c1;
          inline constexpr uintptr_t Grip = 0x4b4;
          inline constexpr uintptr_t ManualActivationOnly = 0x4c2;
          inline constexpr uintptr_t RequiresHandle = 0x4c3;
          inline constexpr uintptr_t TextureId = 0x368;
          inline constexpr uintptr_t Tooltip = 0x470;
+    }
+
+    namespace UnionOperation {
+         inline constexpr uintptr_t AssetId = 0x2e0;
     }
 
     namespace UserInputService {
@@ -567,52 +586,4 @@ namespace SDK::Offsets
          inline constexpr uintptr_t worldStepsPerSec = 0x668;
     }
 
-    // Backward-compatible flat aliases for existing code paths.
-    inline constexpr uintptr_t Adornee = Misc::Adornee;
-    inline constexpr uintptr_t CameraPos = Camera::Position;
-    inline constexpr uintptr_t CameraRotation = Camera::Rotation;
-    inline constexpr uintptr_t CameraSubject = Camera::CameraSubject;
-    inline constexpr uintptr_t CameraType = Camera::CameraType;
-    inline constexpr uintptr_t Children = Instance::ChildrenStart;
-    inline constexpr uintptr_t ChildrenEnd = Instance::ChildrenEnd;
-    inline constexpr uintptr_t ClassDescriptor = Instance::ClassDescriptor;
-    inline constexpr uintptr_t ClockTime = Lighting::ClockTime;
-    inline constexpr uintptr_t Dimensions = VisualEngine::Dimensions;
-    inline constexpr uintptr_t DisplayName = Player::DisplayName;
-    inline constexpr uintptr_t FakeDataModelPointer = FakeDataModel::Pointer;
-    inline constexpr uintptr_t FakeDataModelToDataModel = FakeDataModel::RealDataModel;
-    inline constexpr uintptr_t FOV = Camera::FieldOfView;
-    inline constexpr uintptr_t FramePositionOffsetX = 0x51c;
-    inline constexpr uintptr_t FramePositionOffsetY = 0x524;
-    inline constexpr uintptr_t GameId = DataModel::GameId;
-    inline constexpr uintptr_t Health = Humanoid::Health;
-    inline constexpr uintptr_t HumanoidDisplayName = Humanoid::DisplayName;
-    inline constexpr uintptr_t JumpPower = Humanoid::JumpPower;
-    inline constexpr uintptr_t LocalPlayer = Player::LocalPlayer;
-    inline constexpr uintptr_t MaterialType = Primitive::Material;
-    inline constexpr uintptr_t MaxHealth = Humanoid::MaxHealth;
-    inline constexpr uintptr_t MeshPartColor3 = BasePart::Color3;
-    inline constexpr uintptr_t ModelInstance = Player::ModelInstance;
-    inline constexpr uintptr_t MousePosition = MouseService::MousePosition;
-    inline constexpr uintptr_t Name = Instance::Name;
-    inline constexpr uintptr_t OutdoorAmbient = Lighting::OutdoorAmbient;
-    inline constexpr uintptr_t Parent = Instance::Parent;
-    inline constexpr uintptr_t PartSize = Primitive::Size;
-    inline constexpr uintptr_t Position = Primitive::Position;
-    inline constexpr uintptr_t RigType = Humanoid::RigType;
-    inline constexpr uintptr_t Rotation = Primitive::Rotation;
-    inline constexpr uintptr_t TeamColor = Team::BrickColor;
-    inline constexpr uintptr_t Transparency = BasePart::Transparency;
-    inline constexpr uintptr_t UserId = Player::UserId;
-    inline constexpr uintptr_t Value = Misc::Value;
-    inline constexpr uintptr_t Velocity = Primitive::AssemblyLinearVelocity;
-    inline constexpr uintptr_t viewmatrix = VisualEngine::ViewMatrix;
-    inline constexpr uintptr_t VisualEnginePointer = VisualEngine::Pointer;
-    inline constexpr uintptr_t WalkSpeed = Humanoid::Walkspeed;
-    inline constexpr uintptr_t WalkSpeedCheck = Humanoid::WalkspeedCheck;
-
-    namespace Senders {
-        inline constexpr uintptr_t PhysicsSenderMaxBandwidthBps = 0x63595CC;
-    }
 }
-
